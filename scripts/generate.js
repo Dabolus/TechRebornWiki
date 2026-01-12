@@ -49,6 +49,18 @@ import path from "path";
 		return tree;
 	}
 
+	function flattenRecipes(recipes) {
+		return Object.values(recipes).flatMap(item => {
+			if ('outputs' in item || 'result' in item || 'fluid' in item) {
+				return [item];
+			}
+			if (Array.isArray(item)) {
+				return item;
+			}
+			return flattenRecipes(item);
+		});
+	}
+
 	const recipes = await readRecipes(recipesDir);
 
 	// now that we've read in all recipes, let's process them by category (folder)
@@ -100,7 +112,6 @@ import path from "path";
 				${newSections[key].map(obj => obj.mdx).join("\n")}
 				</details>\n`;
 			}
-			
 		}
 		const output = `${original}
 		<details>
@@ -109,6 +120,85 @@ import path from "path";
 		</details>`
 		await fs.writeFile(mdxPath, output, "utf8");
 	}
+
+  // Next, write the recipe(s) of each item in their respective mdx file
+
+	// First of all, let's get all the documented blocks and items into a flat array
+  const blocksCategories = await fs.readdir(
+    path.join(process.cwd(), 'docs', 'blocks'),
+  ).then(categories => categories.map(cat => path.join('blocks', cat)));
+  const itemsCategories = await fs.readdir(
+    path.join(process.cwd(), 'docs', 'items'),
+  ).then(categories => categories.map(cat => path.join('items', cat)));
+  const allDocumentedItems = await Promise.all(
+    [...blocksCategories, ...itemsCategories].map(async category => {
+      const categoryPath = path.join(process.cwd(), 'docs', category);
+      const itemFiles = await fs
+        .readdir(categoryPath)
+        // Probably a file instead of a directory, ignore it
+        .catch(() => []);
+      return itemFiles
+        .filter(file => !file.startsWith('_'))
+        .map(file => [file.split('.').shift(), path.join(categoryPath, file)]);
+    }),
+  ).then(nestedItems => Object.fromEntries(nestedItems.flat()));
+
+	// First of all, let's flatten the recipes into a single array for easier processing
+	const flatRecipes = flattenRecipes(recipes);
+
+	// Now, we want all the recipes grouped by their output item. If an item has multiple outputs, it will appear in multiple groups.
+	const recipesByOutput = {};
+	for (const recipe of flatRecipes) {
+		const output = recipe.outputs || recipe.result || recipe.fluid;
+		const outputsArray = Array.isArray(output) ? output : [output];
+		for (const out of outputsArray) {
+			const outputId = typeof out === 'string' ? out : out.id;
+			if (outputId.startsWith('techreborn:')) {
+				recipesByOutput[outputId] = [
+					...(recipesByOutput[outputId] || []),
+					recipe
+				]
+			}
+		}
+	}
+
+	// Finally, let's write the recipes into their respective item mdx files
+	for (const [itemFullId, recipes] of Object.entries(recipesByOutput)) {
+		const itemId = filterId(itemFullId).split(':').pop();
+		const itemDocPath = allDocumentedItems[itemId];
+		if (!itemDocPath) {
+			// Item documentation not found, skip it
+			console.warn(`⚠️  Missing documentation for item: ${itemId}`);
+			continue;
+		}
+		const itemDoc = await fs.readFile(itemDocPath, 'utf8');
+		const recipeHeaderIndex = itemDoc.indexOf('### Recipe');
+		const nextSectionIndex = itemDoc.indexOf('#', recipeHeaderIndex + '### Recipe'.length + 1);
+		if (recipeHeaderIndex < 0) {
+			// No recipe section found, skip it
+			console.warn(`⚠️  No recipe section found in documentation for item: ${itemId}`);
+			continue;
+		}
+		let newRecipeSection = '### Recipes\n';
+		for (const recipe of recipes) {
+			const recipeType = recipe.type.split(':').pop();
+			const category = ORDER.find(cat => recipeType.includes(cat.name)) || {
+				name: recipeType,
+				func: 'crafting',
+			};
+			const converted = formatter[category.func]?.(recipe);
+			if (!converted) {
+				console.warn(`No formatter found for recipe type: ${recipe.type} for item: ${itemId}`);
+				continue;
+			}
+			newRecipeSection += `\n${converted.mdx}\n`;
+		}
+		newRecipeSection += '\n';
+		const newItemDoc = `${itemDoc.slice(0, recipeHeaderIndex)}${newRecipeSection}${nextSectionIndex > 0 ? itemDoc.slice(nextSectionIndex) : ''}`;
+		await fs.writeFile(itemDocPath, newItemDoc, 'utf8');
+		console.log(`✅  Updated recipes in documentation for item: ${itemId}`);
+	}
+
 
 	// await fs.writeFile(outputFile, JSON.stringify(recipes, null, 2), "utf8");
 	// console.log(`✅  Filtered recipes written to ${outputFile}`);
@@ -174,7 +264,8 @@ const formatter = {
 				id: data.result.id,
 				qty: data.result.count
 			}],
-			tool: data.type,
+			// In case of crafting_shaped or crafting_shapeless, always use the crafting table tool
+			tool: data.type.startsWith("minecraft:crafting") ? "minecraft:crafting_table" : data.type,
 			meta: {
 				...(!!data.power && {power: data.power}),
 				...(!!data.time && {time: data.time}),
@@ -183,15 +274,20 @@ const formatter = {
 		if (!!data.ingredients) {
 			// if they passed ingredients, that means order doesn't matter
 			// these are generally simplier recipes
-			data.input = data.ingredients.map((obj) => ({
-				id: filterId(obj.ingredient),
+			const ingredients = data.ingredients.map((obj) => ({
+				id: filterId(typeof obj === 'string' ? obj : obj.ingredient),
 				qty: !!obj.count ? obj.count : 1,
 			}));
+			// Pad ingredients to ensure a full 3x3 grid
+			const paddedIngredients = Array.from({ length: 9 }, (_, i) => ingredients[i] || " ");
+			config.input = paddedIngredients;
 		} else if (!!data.pattern) {
 			// the standard way of passing in complex recipes
-			const patternArr = data.pattern.flatMap(section => section.split(""));
+			const patternArr = data.pattern.flatMap(section => section.padEnd(3, " ").split(""));
+			// Some recipes do not provide full 3x3 patterns, we need to pad them out
+			const paddedPatternArr = Array.from({ length: 9 }, (_, i) => patternArr[i] || " ");
 			data.key[" "] = "minecraft:air";
-			config.input = patternArr.map((key) => ({
+			config.input = paddedPatternArr.map((key) => ({
 				id: filterId(data.key[key]),
 				qty: 1
 			}));
@@ -228,7 +324,21 @@ const filterId = (input, full = null) => {
 		"#c:sulfurs": "techreborn:sulfur",
 		// these image and item names differ
 		"#c:ingots/chromium": "techreborn:chrome_ingot",
+		"#c:plates/chromium": "techreborn:chrome_plate",
 		"#c:storage_blocks/chromium": "techreborn:chrome_storage_block",
+		"techreborn:basic_machine_casing": "techreborn:standard_machine_casing",
+		"techreborn:dragon_egg_syphon": "techreborn:dragon_egg_energy_siphon",
+		"techreborn:lapotronic_orb": "techreborn:lapotronic_energy_orb",
+		"techreborn:solid_fuel_generator": "techreborn:generator",
+		"techreborn:semi_fluid_generator": "techreborn:semifluid_generator",
+		"techreborn:assembly_machine": "techreborn:assembling_machine",
+		"techreborn:chunk_loader": "techreborn:industrial_chunkloader",
+		"techreborn:low_voltage_su": "techreborn:battery_box",
+		"techreborn:medium_voltage_su": "techreborn:mfe",
+		"techreborn:high_voltage_su": "techreborn:mfsu",
+		"techreborn:adjustable_su": "techreborn:aesu",
+		"techreborn:interdimensional_su": "techreborn:idsu",
+		"techreborn:lapotronic_su": "techreborn:lesu",
 		// if we have more nuggets, we'll write a mapper for them
 		"#c:nuggets/iridium": "techreborn:iridium_nugget",
 		"#c:nuggets/netherite": "techreborn:netherite_nugget",
@@ -251,6 +361,7 @@ const filterId = (input, full = null) => {
 		// this is about turning general item terms into specific ones
 		"#c:foods/cooked_meats": "minecraft:cooked_beef",
 		"#c:foods/raw_meats": "minecraft:raw_beef",
+		"#c:barrels/wooden": "minecraft:barrel",
 		"minecraft:planks": "minecraft:oak_planks",
 		"minecraft:logs": "minecraft:oak_logs",
 		"minecraft:signs": "minecraft:oak_sign",
@@ -313,7 +424,7 @@ const filterId = (input, full = null) => {
 		}
 	}
 	// some filtering for outputs that output a cell, but don't include the fluid
-	if (input === "techreborn:cell" && !!full.components?.["techreborn:fluid"]) {
+	if (input === "techreborn:cell" && !!full?.components?.["techreborn:fluid"]) {
 		input = `${full.components["techreborn:fluid"]}_cell`;
 		if (input.includes("minecraft:") === true) {
 			// to fix input like "minecraft:water_cell"
