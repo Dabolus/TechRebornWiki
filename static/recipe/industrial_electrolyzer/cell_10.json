@@ -6,6 +6,7 @@
       "ingredient": "techreborn:flint_dust"
     },
     {
+      "count": 2,
       "ingredient": {
         "fabric:type": "fabric:components",
         "base": "techreborn:cell",

@@ -21,6 +21,10 @@
     {
       "count": 8,
       "id": "minecraft:soul_sand"
+    },
+    {
+      "count": 5,
+      "id": "techreborn:cell"
     }
   ],
   "power": 128,
