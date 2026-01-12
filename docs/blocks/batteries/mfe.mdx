@@ -13,11 +13,58 @@ For more details and how to use, read [general information about Batteries](/doc
 |--------|-----------|-----------|---------|
 | Medium | 128 E/t   | 128 E/t   | 300 kE  |
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:insulated_gold_cable techreborn:energy_crystal techreborn:insulated_gold_cable input techreborn:energy_crystal techreborn:basic_machine_frame techreborn:energy_crystal input techreborn:insulated_gold_cable techreborn:energy_crystal techreborn:insulated_gold_cable output techreborn:mfe"/>
+<Machine config={{
+  "id": "medium_voltage_su",
+  "input": [
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:medium_voltage_su"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 Used as an ingredient in the <McItem slug="minecraft:crafting_table" inline={true}/> to produce:
 

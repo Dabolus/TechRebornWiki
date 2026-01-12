@@ -10,6 +10,54 @@ A water in still state is needed right in front of the machine.
 
 By default, every 400 tick (20 seconds) an item will be generated from the fishing loot table, which can be increased by upgrading.
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe="input minecraft:string techreborn:advanced_circuit minecraft:string input minecraft:stick techreborn:advanced_machine_frame minecraft:stick input techreborn:sapphire_plate minecraft:string techreborn:sapphire_plate output techreborn:generator" />
+<Machine config={{
+  "id": "fishing_station",
+  "input": [
+    {
+      "id": "minecraft:string",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:string",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stick",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stick",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:sapphire_plate",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:string",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:sapphire_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:fishing_station"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+

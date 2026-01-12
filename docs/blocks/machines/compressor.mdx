@@ -8,11 +8,58 @@ title: Compressor
 
 **Compressor** used to make <McItem slug="techreborn:copper_plate" inline={true}/> from <McItem slug="techreborn:copper_ingot" inline={true}/>. It is a Low Tier machine with input as 32 E\t and internal buffer for 1k Energy.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe=" input minecraft:stone air minecraft:stone input minecraft:stone techreborn:electronic_circuit minecraft:stone input minecraft:stone techreborn:basic_machine_frame minecraft:stone output techreborn:compressor "/>
+<Machine config={{
+  "id": "compressor",
+  "input": [
+    {
+      "id": "minecraft:stone",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stone",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stone",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stone",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stone",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:stone",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:compressor"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 **Compressor** used as a crafting ingredient in several recipes:
 

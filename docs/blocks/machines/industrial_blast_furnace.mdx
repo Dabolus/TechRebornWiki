@@ -9,11 +9,58 @@ title: Industrial Blast Furnace
 The **Industrial Blast Furnace** is a multi-block machine used to smelt tough metals. It has an input rate of 512 FE/tick and an internal buffer of 40,000 FE.  
 The smelting abilities depend on the casings used for the multi-block.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:advanced_circuit techreborn:cupronickel_heating_coil techreborn:advanced_circuit input techreborn:cupronickel_heating_coil techreborn:advanced_machine_block techreborn:cupronickel_heating_coil input techreborn:electric_furnace techreborn:cupronickel_heating_coil techreborn:electric_furnace output techreborn:industrial_blast_furnace"/>
+<Machine config={{
+  "id": "industrial_blast_furnace",
+  "input": [
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cupronickel_heating_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cupronickel_heating_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cupronickel_heating_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electric_furnace",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cupronickel_heating_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electric_furnace",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:industrial_blast_furnace"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Building Instructions
+### Building Instructions
 
 The **Industrial Blast Furnace** requires a 3×4 multi-block with a hole in the center.  
 The multi-block can be built from different machine casings. Possible options include:
@@ -46,9 +93,10 @@ Two blocks of lava placed in the center of the multi-block will add **500 heat**
 
 :::
 
-## Video
+### Video
 
 [Watch the tutorial on YouTube](https://www.youtube.com/watch?v=DEULTz1JWCI)
+
 ### Crafting Recipes
 		<details>
 			<summary>Recipes using Industrial Blast Furnace</summary>

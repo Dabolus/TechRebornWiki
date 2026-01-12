@@ -26,9 +26,56 @@ It must be combined with a minimum of 16 <McItem slug="techreborn:fusion_coil"  
 [^6]: Capped at 2,147,483,647 Energy
 [^7]: _Total Power Generated_ divided by _Max Capacity_, rounded to nearest whole percent
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:energy_flow_chip techreborn:energy_flow_chip techreborn:energy_flow_chip input techreborn:energy_crystal techreborn:fusion_coil techreborn:energy_crystal input techreborn:energy_flow_chip techreborn:energy_flow_chip techreborn:energy_flow_chip output techreborn:fusion_control_computer" />
+<Machine config={{
+  "id": "fusion_control_computer",
+  "input": [
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:fusion_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:fusion_control_computer"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Usage
 

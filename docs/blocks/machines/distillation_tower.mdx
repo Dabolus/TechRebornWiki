@@ -6,11 +6,58 @@ title: Distillation Tower
 
 The **Distillation Tower** is a multiblock machine that is used to crack oil into components. The **Distillation Tower** is a medium tier machine with 128 E\t input rate and has an internal buffer of 10k Energy.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:industrial_centrifuge techreborn:energy_flow_chip techreborn:industrial_centrifuge input techreborn:extractor techreborn:industrial_machine_frame techreborn:extractor input techreborn:industrial_electrolyzer techreborn:energy_flow_chip techreborn:industrial_electrolyzer output techreborn:distillation_tower" />
+<Machine config={{
+  "id": "distillation_tower",
+  "input": [
+    {
+      "id": "techreborn:industrial_centrifuge",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_centrifuge",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:extractor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:extractor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_electrolyzer",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_electrolyzer",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:distillation_tower"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Building Instructions
+### Building Instructions
 
 The **Distillation Tower** requires a 3×3×4 multiblock structure with a hollow center.
 

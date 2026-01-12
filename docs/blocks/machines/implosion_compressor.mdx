@@ -8,11 +8,58 @@ title: Implosion Compressor
 
 The **Implosion Compressor** uses the raw power of TNT to make items. It is a multi-block machine with 64k energy buffer and 64 E\t input rate.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:advanced_alloy_ingot techreborn:advanced_machine_frame techreborn:advanced_alloy_ingot input techreborn:advanced_circuit techreborn:compressor techreborn:advanced_circuit input techreborn:advanced_alloy_ingot techreborn:advanced_machine_frame techreborn:advanced_alloy_ingot output techreborn:implosion_compressor"/>
+<Machine config={{
+  "id": "implosion_compressor",
+  "input": [
+    {
+      "id": "techreborn:advanced_alloy_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_alloy_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:compressor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_alloy_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_alloy_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:implosion_compressor"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Building instructions
+### Building instructions
 
 The **Implosion Compressor** multi-block has 3 layers. The **first layer** contains 9x <McItem slug="techreborn:advanced_machine_casing" inline={true}/> <img src="/img/blocks/layer1.png" alt="layer1.png"/><br/>
 The **second layer** contains 8x <McItem slug="techreborn:advanced_machine_casing" inline={true}/> with a hole in the centre. <img src="/img/blocks/layer2.png" alt="layer2.png"/><br/>

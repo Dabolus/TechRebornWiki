@@ -7,11 +7,58 @@ title: Fluid Replicator
 The **Fluid Replicator** is an advanced machine capable of replicating fluid placed inside the hollow of a multiblock structure using energy and <McItem slug="techreborn:uu-matter" />. 
 The **Fluid Replicator** is a high-tier machine with 1024 FE input rate and has an internal buffer of 1.6M FE.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:tungstensteel_plate techreborn:energy_flow_chip techreborn:tungstensteel_plate input techreborn:energy_flow_chip techreborn:highly_advanced_machine_block techreborn:energy_flow_chip input techreborn:industrial_electrolyzer techreborn:superconductor techreborn:chemical_reactor output techreborn:fluid_replicator" />
+<Machine config={{
+  "id": "fluid_replicator",
+  "input": [
+    {
+      "id": "techreborn:tungstensteel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:tungstensteel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_electrolyzer",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:superconductor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:chemical_reactor",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:fluid_replicator"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Building Instructions
+### Building Instructions
 
 The **Fluid Replicator** requires a 3×3×1 multiblock with a hollow center.
 
@@ -20,7 +67,7 @@ The **Fluid Replicator** requires a 3×3×1 multiblock with a hollow center.
 
 <img src="/img/blocks/fluid_replicator.png" alt="Fluid Replicator" />
 
-## Usage
+### Usage
 
 Put the fluid to replicate inside the hollow in the multiblock.
 

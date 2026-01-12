@@ -12,9 +12,38 @@ The **Generator** is the most basic power generator in the mod and produces ener
 |------|-------------|--------|---------|
 | Basic | Solid Fuels | 32 E/t | 10 kE   |
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe="input air air air input techreborn:red_cell_battery techreborn:basic_machine_frame minecraft:furnace input air air air output techreborn:generator"/>
+<Machine config={{
+  "id": "solid_fuel_generator",
+  "input": [
+    {
+      "id": "techreborn:red_cell_battery",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:furnace",
+      "qty": 1
+    },
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ],
+  "output": [
+    {
+      "id": "techreborn:solid_fuel_generator"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Usage
 

@@ -8,11 +8,58 @@ title: Industrial Storage Unit
 
 The **Industrial Storage Unit** is a storage unit with a capacity of 65,536 items (1,024 stacks).  
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:steel_plate techreborn:steel_plate techreborn:steel_plate input techreborn:advanced_storage_unit techreborn:industrial_machine_frame techreborn:advanced_storage_unit input techreborn:industrial_circuit techreborn:digital_display techreborn:industrial_circuit output techreborn:industrial_storage_unit"/>
+<Machine config={{
+  "id": "industrial_storage_unit",
+  "input": [
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_storage_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_storage_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:digital_display",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_circuit",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:industrial_storage_unit"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 Used as an ingredient in the <McItem slug="minecraft:crafting_table" inline={true}/> to produce:
 

@@ -12,11 +12,58 @@ The **MV Transformer** converts energy from High to Medium tier. For more detail
 |---------|---------|
 | 512 E/t | 128 E/t |
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input air techreborn:insulated_gold_cable air input air techreborn:basic_machine_frame air input air techreborn:insulated_gold_cable air output techreborn:mv_transformer"/>
+<Machine config={{
+  "id": "mv_transformer",
+  "input": [
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:mv_transformer"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 Used as an ingredient in the <McItem slug="minecraft:crafting_table" inline={true}/> to produce:
 

@@ -6,11 +6,58 @@ title: Chemical Reactor
 
 The **Chemical Reactor** is used to combine two <McItem slug="techreborn:lava_cell" /> (and other assorted items) into a third fluid or item. It has input rate of 128 Energy and an internal buffer of 10,000 Energy.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:invar_plate techreborn:extractor techreborn:invar_plate input techreborn:advanced_circuit techreborn:compressor techreborn:advanced_circuit input techreborn:invar_plate techreborn:extractor techreborn:invar_plate output techreborn:chemical_reactor" />
+<Machine config={{
+  "id": "chemical_reactor",
+  "input": [
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:extractor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:compressor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:extractor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:chemical_reactor"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Crafting Highlights
+### Crafting Highlights
 
 There are a significant number of recipes this machine can make, but below is a list of the most useful ones. You can find the full un-abridged list of recipes below in "Recipes using Chemical Reactor"
 <details>

@@ -8,8 +8,103 @@ title: Industrial Tank Unit
 
 The **Industrial Tank Unit** is a fluid storage unit with a capacity of 1,024,000 Mb.
 
-## Recipes
+### Recipes
 
-<CraftingTable recipe="input air techreborn:cell air input techreborn:rubber techreborn:industrial_storage_unit techreborn:rubber input air techreborn:cell air output techreborn:industrial_tank_unit"/>
+<Machine config={{
+  "id": "industrial_tank_unit",
+  "input": [
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cell",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_storage_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cell",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:industrial_tank_unit"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-<CraftingTable recipe="input techreborn:steel_plate techreborn:steel_plate techreborn:steel_plate input techreborn:advanced_tank_unit techreborn:industrial_machine_frame techreborn:advanced_tank_unit input techreborn:industrial_circuit techreborn:digital_display techreborn:industrial_circuit output techreborn:industrial_tank_unit"/>
+<Machine config={{
+  "id": "industrial_tank_unit_from_advanced",
+  "input": [
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_tank_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_tank_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:digital_display",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_circuit",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:industrial_tank_unit"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+

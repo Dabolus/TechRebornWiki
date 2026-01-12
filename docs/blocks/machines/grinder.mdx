@@ -17,9 +17,56 @@ Mining Ore Blocks instead of Raw Ores will also allow you to triple ingot produc
 | Low  | 32 E/t  | 2 E/t      | 1 kE    |
 
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe=" input minecraft:flint minecraft:flint minecraft:flint input minecraft:cobblestone techreborn:basic_machine_frame minecraft:cobblestone input air techreborn:electronic_circuit air output techreborn:grinder "/>
+<Machine config={{
+  "id": "grinder",
+  "input": [
+    {
+      "id": "minecraft:flint",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:flint",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:flint",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:cobblestone",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:cobblestone",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:grinder"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Crafting Recipes
 		<details>

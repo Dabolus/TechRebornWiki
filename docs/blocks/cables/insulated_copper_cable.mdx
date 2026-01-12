@@ -10,11 +10,135 @@ The insulated version of <McItem slug="techreborn:copper_cable" inline={true}/>
 
 ### Recipes
 
-<CraftingTable recipe="input techreborn:rubber techreborn:rubber techreborn:rubber input techreborn:copper_ingot techreborn:copper_ingot techreborn:copper_ingot input techreborn:rubber techreborn:rubber techreborn:rubber output techreborn:insulated_copper_cable,6"/><br/>
-<CraftingTable recipe="input techreborn:rubber techreborn:copper_ingot techreborn:rubber input techreborn:rubber techreborn:copper_ingot techreborn:rubber input techreborn:rubber techreborn:copper_ingot techreborn:rubber output techreborn:insulated_copper_cable,6"/><br/>
-<CraftingTable recipe="input techreborn:rubber techreborn:copper_cable air input air air air input air air air output techreborn:insulated_copper_cable"/>
+<Machine config={{
+  "id": "insulated_copper_cable",
+  "input": [
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:insulated_copper_cable",
+      "qty": 6
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+<Machine config={{
+  "id": "insulated_copper_cable_alt",
+  "input": [
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:insulated_copper_cable",
+      "qty": 6
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "insulated_copper_cable_shapeless",
+  "input": [
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:copper_cable",
+      "qty": 1
+    },
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ],
+  "output": [
+    {
+      "id": "techreborn:insulated_copper_cable"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+### Usage
 
 Used as an ingredient in the <McItem slug="minecraft:crafting_table" inline={true}/> to produce:
 

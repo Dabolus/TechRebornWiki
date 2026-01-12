@@ -12,11 +12,81 @@ title: Tin Cable
 |------|----------|--------|
 | Low  | 32 E/t   | 128 E  |
 
-<CraftingTable recipe="input air air air input techreborn:tin_ingot techreborn:tin_ingot techreborn:tin_ingot input air air air output techreborn:tin_cable,9"/>
 
-<Machine config={{input: [{id: "techreborn:tin_ingot", qty: 1}], output: [{id: "techreborn:tin_cable", qty: 6}], tool: "techreborn:wire_mill"}} />
+### Recipes
 
-## Crafting Usage
+<Machine config={{
+  "id": "tin_cable",
+  "input": [
+    {
+      "id": "techreborn:tin_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:tin_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:tin_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:tin_cable",
+      "qty": 9
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "tin_cable",
+  "input": [
+    {
+      "id": "techreborn:tin_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:tin_cable",
+      "qty": 6
+    }
+  ],
+  "tool": "techreborn:wire_mill",
+  "meta": {
+    "power": 2,
+    "time": 200
+  }
+}} />
+
+### Usage
 
 Used as an ingredient in the crafting table to produce:
 

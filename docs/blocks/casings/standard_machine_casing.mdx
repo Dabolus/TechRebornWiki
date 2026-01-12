@@ -8,13 +8,159 @@ title: Standard Machine Casing
 
 The **Standard Machine Casing** is used to build multi-block machines.
 
-## Recipes
+### Recipes
 
-<CraftingTable recipe="input techreborn:refined_iron_ingot techreborn:refined_iron_ingot techreborn:refined_iron_ingot input techreborn:electronic_circuit techreborn:basic_machine_frame techreborn:electronic_circuit input techreborn:refined_iron_ingot techreborn:refined_iron_ingot techreborn:refined_iron_ingot output techreborn:standard_machine_casing,4"/>
-<CraftingTable recipe="input techreborn:iron_plate techreborn:iron_plate techreborn:iron_plate input techreborn:electronic_circuit techreborn:basic_machine_frame techreborn:electronic_circuit input techreborn:iron_plate techreborn:iron_plate techreborn:iron_plate output techreborn:standard_machine_casing,4"/>
-<CraftingTable recipe="input techreborn:aluminum_plate techreborn:aluminum_plate techreborn:aluminum_plate input techreborn:electronic_circuit techreborn:basic_machine_frame techreborn:electronic_circuit input techreborn:aluminum_plate techreborn:aluminum_plate techreborn:aluminum_plate output techreborn:standard_machine_casing,4"/>
+<Machine config={{
+  "id": "basic_machine_casing",
+  "input": [
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:basic_machine_casing",
+      "qty": 4
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+<Machine config={{
+  "id": "basic_machine_casing_alt",
+  "input": [
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:basic_machine_casing",
+      "qty": 4
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "basic_machine_casing_alt_alt",
+  "input": [
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:basic_machine_casing",
+      "qty": 4
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+### Usage
 
 Used as an ingredient in the <McItem slug="minecraft:crafting_table" inline={true}/> to produce:
 

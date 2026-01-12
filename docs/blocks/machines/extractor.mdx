@@ -10,9 +10,57 @@ The **Extractor** requires a power input of 32 E/tick to work and has an interna
 
 The extractor can also be used to discard the contents of a <McItem slug="techreborn:cell" inline={true}/> so that you can use it again.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:treetap techreborn:basic_machine_frame techreborn:treetap input techreborn:treetap techreborn:electronic_circuit techreborn:treetap input air air air output techreborn:extractor" />
+<Machine config={{
+  "id": "extractor",
+  "input": [
+    {
+      "id": "techreborn:treetap",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:basic_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:treetap",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:treetap",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:treetap",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:extractor"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
 ### Crafting Recipes
 		<details>
 			<summary>Recipes using Extractor</summary>

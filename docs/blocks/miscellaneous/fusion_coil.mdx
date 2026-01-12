@@ -4,13 +4,60 @@ title: Fusion Coil
 
 <ItemImage file="fusion_coil" alt="Fusion Coil" size="200" />
 
-## Fusion Coil
+# Fusion Coil
 
 The **Fusion Coil** is a block that, along with the <McItem slug="techreborn:Fusion_Control_Computer" inline={true}/>, is used to make the fusion reactor.
 
 ### Recipes
 
-<CraftingTable recipe="input techreborn:Energy_Flow_Chip techreborn:Superconductor techreborn:Energy_Flow_Chip input techreborn:Nichrome_Heating_Coil techreborn:Advanced_Machine_Casing techreborn:Nichrome_Heating_Coil input techreborn:Energy_Flow_Chip techreborn:Iridium_Neutron_Reflector techreborn:Energy_Flow_Chip output techreborn:Fusion_Coil"/>
+<Machine config={{
+  "id": "fusion_coil",
+  "input": [
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:superconductor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:nichrome_heating_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_casing",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:nichrome_heating_coil",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iridium_neutron_reflector",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:fusion_coil"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Uses
 

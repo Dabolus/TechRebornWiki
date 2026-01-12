@@ -8,12 +8,57 @@ title: Industrial Chunkloader
 
 The **Industrial Chunkloader** keeps the chunk it is in loaded so machines will continue to work even if the player is far away. It requires no energy. You can change the radius of chunks loaded around the **Industrial Chunkloader**.
 
-## Recipe
+### Recipes
 
-**Industrial Chunkloader** can be crafted using the following recipe:
+<Machine config={{
+  "id": "chunk_loader",
+  "input": [
+    {
+      "id": "techreborn:bronze_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:coal_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:gold_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:lapi_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:nickel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:obsidian_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:quartz_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:redstone_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:chunk_loader"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-<CraftingTable recipe="input techreborn:bronze_plate techreborn:coal_plate techreborn:gold_plate input techreborn:lapis_plate techreborn:industrial_machine_frame techreborn:nickel_plate input techreborn:obsidian_plate techreborn:quartz_plate techreborn:redstone_plate output techreborn:industrial_chunkloader"/>
-
-## Usage
+### Usage
 
 Place it where you want to have chunks loaded and adjust the radius if necessary.

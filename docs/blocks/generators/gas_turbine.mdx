@@ -19,10 +19,105 @@ The **Gas Turbine** produces energy from various gases. It has an internal tank 
 | Hydrogen | 15,000    |
 | Methane  | 45,000    |
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:invar_plate techreborn:advanced_circuit techreborn:invar_plate input techreborn:wind_mill techreborn:reinforced_glass techreborn:wind_mill input techreborn:invar_plate techreborn:advanced_circuit techreborn:invar_plate output techreborn:gas_turbine"/><br/>
-<CraftingTable recipe="input techreborn:aluminum_plate techreborn:advanced_circuit techreborn:aluminum_plate input techreborn:wind_mill techreborn:reinforced_glass techreborn:wind_mill input techreborn:aluminum_plate techreborn:advanced_circuit techreborn:aluminum_plate output techreborn:gas_turbine"/>
+<Machine config={{
+  "id": "gas_turbine",
+  "input": [
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:wind_mill",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:reinforced_glass",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:wind_mill",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:invar_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:gas_turbine"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "gas_turbine_alt",
+  "input": [
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:wind_mill",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:reinforced_glass",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:wind_mill",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aluminum_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:gas_turbine"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Usage
 

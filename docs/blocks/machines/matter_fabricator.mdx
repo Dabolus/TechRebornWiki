@@ -11,6 +11,54 @@ The **Matter Fabricator** is used to produce <McItem slug="techreborn:uu_matter"
 Both <McItem slug="techreborn:scrap" inline={true}/> and <McItem slug="techreborn:scrap_box" inline={true}/> can be used in the **Matter Fabricator**.  
 The first one will give you 3.33% on the progress bar for producing a single piece of <McItem slug="techreborn:uu_matter" inline={true}/> which means that to produce 1x <McItem slug="techreborn:uu_matter" inline={true}/>, you will need 30x <McItem slug="techreborn:scrap" inline={true}/>.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:energy_flow_chip techreborn:extractor techreborn:energy_flow_chip input techreborn:highly_advanced_machine_block techreborn:lapotronic_energy_orb techreborn:highly_advanced_machine_block input techreborn:energy_flow_chip techreborn:extractor techreborn:energy_flow_chip output techreborn:matter_fabricator"/>
+<Machine config={{
+  "id": "matter_fabricator",
+  "input": [
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:extractor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:lapotronic_energy_orb",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:extractor",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:matter_fabricator"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+

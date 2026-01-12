@@ -12,6 +12,54 @@ The **HV Transformer** converts energy from Extreme to High tier. For more detai
 |----------|----------|
 | 2048 E/t | 512 E/t  |
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input air techreborn:insulated_hv_cable air input air techreborn:mv_transformer air input air techreborn:insulated_hv_cable air output techreborn:hv_transformer"/>
+<Machine config={{
+  "id": "hv_transformer",
+  "input": [
+    {
+      "id": "techreborn:insulated_hv_cable",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:mv_transformer",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:insulated_hv_cable",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:hv_transformer"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+

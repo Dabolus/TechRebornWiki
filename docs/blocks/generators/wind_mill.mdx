@@ -16,8 +16,128 @@ title: Wind Mill
 
 ### Recipes
 
-<CraftingTable recipe="input air techreborn:magnalium_plate air input air techreborn:generator air input air techreborn:magnalium_plate air output techreborn:wind_mill"/><br/>
-<CraftingTable recipe="input air air air input techreborn:magnalium_plate techreborn:generator techreborn:magnalium_plate input air air air output techreborn:wind_mill"/>
+<Machine config={{
+  "id": "wind_mill",
+  "input": [
+    {
+      "id": "techreborn:generator",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:magnalium_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:wind_mill",
+      "qty": 1
+    }
+  ],
+  "tool": "techreborn:assembling_machine",
+  "meta": {
+    "power": 20,
+    "time": 700
+  }
+}} />
+
+<Machine config={{
+  "id": "wind_mill",
+  "input": [
+    {
+      "id": "techreborn:magnalium_plate",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:generator",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:magnalium_plate",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:wind_mill"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "wind_mill_alt",
+  "input": [
+    {
+      "id": "techreborn:magnalium_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:generator",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:magnalium_plate",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:wind_mill"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Usage
 

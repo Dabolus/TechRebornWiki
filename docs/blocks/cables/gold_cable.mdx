@@ -12,11 +12,78 @@ title: Gold Cable
 |------|----------|----------|
 | High | 512 E/t  | 2,048 E  |
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe="input air air air input minecraft:gold_ingot minecraft:gold_ingot minecraft:gold_ingot input air air air output techreborn:gold_cable,12"/><br/>
-<McItem slug="techreborn:wire_mill" inline={true}/> recipe:<br/>
-<McItem slug="minecraft:gold_ingot" inline={true}/> → 6x <McItem slug="techreborn:gold_cable" inline={true}/>
+<Machine config={{
+  "id": "gold_cable",
+  "input": [
+    {
+      "id": "minecraft:gold_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:gold_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:gold_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:gold_cable",
+      "qty": 12
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "gold_cable",
+  "input": [
+    {
+      "id": "minecraft:gold_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:gold_cable",
+      "qty": 6
+    }
+  ],
+  "tool": "techreborn:wire_mill",
+  "meta": {
+    "power": 2,
+    "time": 200
+  }
+}} />
 
 ### Usage
 

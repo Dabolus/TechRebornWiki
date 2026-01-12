@@ -1,24 +1,24 @@
 ---
-title: Recycler
+title: Scrapbox-inator
 ---
 
-<ItemImage file="recycler" alt="Recycler" size="200" />
+<ItemImage file="scrapboxinator" alt="Scrapbox-inator" size="200" />
 
-# Recycler
+# Scrapbox-inator
 
-The **Recycler** is a machine that converts items into <McItem slug="techreborn:scrap" inline={true}/> with a 1 in 6 chance.
+The **Scrapbox-inator** is a machine used to automate opening <McItem slug="techreborn:scrap_box" inline={true}/>es.
 
 | Tier | Input   | Power Draw | Storage |
 |------|---------|------------|---------|
-| Low  | 32 E/t  | 2 E/t      | 1 kE    |
+| Low  | 32 E/t  | 10 E/t     | 1 kE    |
 
 ### Recipes
 
 <Machine config={{
-  "id": "recycler",
+  "id": "scrapboxinator",
   "input": [
     {
-      "id": "minecraft:air",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
@@ -26,7 +26,7 @@ The **Recycler** is a machine that converts items into <McItem slug="techreborn:
       "qty": 1
     },
     {
-      "id": "minecraft:air",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
@@ -34,7 +34,7 @@ The **Recycler** is a machine that converts items into <McItem slug="techreborn:
       "qty": 1
     },
     {
-      "id": "techreborn:compressor",
+      "id": "techreborn:scrap_box",
       "qty": 1
     },
     {
@@ -42,21 +42,21 @@ The **Recycler** is a machine that converts items into <McItem slug="techreborn:
       "qty": 1
     },
     {
-      "id": "minecraft:glowstone_dust",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
-      "id": "minecraft:dirt",
+      "id": "techreborn:electronic_circuit",
       "qty": 1
     },
     {
-      "id": "minecraft:glowstone_dust",
+      "id": "techreborn:iron_plate",
       "qty": 1
     }
   ],
   "output": [
     {
-      "id": "techreborn:recycler"
+      "id": "techreborn:scrapboxinator"
     }
   ],
   "tool": "minecraft:crafting_table",

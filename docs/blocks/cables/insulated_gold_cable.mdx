@@ -8,10 +8,88 @@ title: Insulated Gold Cable
 
 The insulated version of <McItem slug="techreborn:gold_cable" inline={true}/>
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:rubber techreborn:rubber techreborn:rubber input techreborn:rubber minecraft:gold_ingot techreborn:rubber input techreborn:rubber techreborn:rubber techreborn:rubber output techreborn:insulated_gold_cable,4"/><br/>
-<CraftingTable recipe="input air air air input techreborn:rubber techreborn:rubber techreborn:gold_cable input air air air output techreborn:insulated_gold_cable"/>
+<Machine config={{
+  "id": "insulated_gold_cable",
+  "input": [
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:gold_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:insulated_gold_cable",
+      "qty": 4
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "insulated_gold_cable_shapeless",
+  "input": [
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:gold_cable",
+      "qty": 1
+    },
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
+    " "
+  ],
+  "output": [
+    {
+      "id": "techreborn:insulated_gold_cable"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Usage
 

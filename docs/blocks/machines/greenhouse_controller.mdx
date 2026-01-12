@@ -12,9 +12,56 @@ title: Greenhouse Controller
 |------|---------|----------------------|---------|
 | Low  | 32 E/t  | 100 E/crop harvest   | 1 kE    |
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe=" input techreborn:refined_iron_ingot techreborn:advanced_circuit techreborn:refined_iron_ingot input minecraft:iron_hoe techreborn:diamond_saw_blade minecraft:iron_hoe input techreborn:advanced_circuit techreborn:advanced_machine_frame techreborn:advanced_circuit output techreborn:greenhouse_controller "/>
+<Machine config={{
+  "id": "greenhouse_controller",
+  "input": [
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:refined_iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_hoe",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:diamond_saw_blade",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_hoe",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:greenhouse_controller"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Usage
 
@@ -23,11 +70,10 @@ Standard Minecraft requirements apply to crops, like watered and tilled dirt for
 Most crops grow from bottom to top with the exception of Cave Vines. 
 Thus, in order to gather Glow Berries you will need to wait until the vine hit the ground.
 
+<McItem slug="techreborn:lamp_incandescent" inline={true} overrides={{name:"Incandescent lamps"}}/> and
+<McItem slug="techreborn:lamp_led" inline={true} overrides={{name:"LED lamps"}}/> above crops will speed-up grow.
 
-Powered lamps above crops will speed-up grow.
-
-
-Besides Minecraft crops **Greenhouse Controller** able to gather <McItem slug="techreborn:sap" /> from Rubber trees.
+Besides Minecraft crops **Greenhouse Controller** is able to gather <McItem slug="techreborn:sap" /> from Rubber trees.
 
 ![greenhouse_controller](/img/blocks/greenhouse_controller.png)
 

@@ -12,9 +12,56 @@ The **Assembling Machine** is used to assemble components out of ingredients.
 |--------|---------|------------|---------|
 | Medium | 128 E/t | 20 E/t     | 10 kE   |
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe=" input techreborn:electrum_plate techreborn:digital_display techreborn:electrum_plate input techreborn:advanced_circuit techreborn:advanced_machine_frame techreborn:advanced_circuit input techreborn:electrum_plate minecraft:piston techreborn:electrum_plate output techreborn:assembly_machine "/>
+<Machine config={{
+  "id": "assembling_machine",
+  "input": [
+    {
+      "id": "techreborn:electrum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:digital_display",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electrum_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electrum_plate",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:piston",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electrum_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:assembly_machine"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
 ### Crafting Recipes
 		<details>
@@ -1082,7 +1129,7 @@ The **Assembling Machine** is used to assemble components out of ingredients.
   "id": "wind_mill",
   "input": [
     {
-      "id": "techreborn:solid_fuel_generator",
+      "id": "techreborn:generator",
       "qty": 1
     },
     {

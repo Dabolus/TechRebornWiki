@@ -6,9 +6,56 @@ title: Electric Furnace
 
 **Electric Furnace** is a machine that behaves like a <McItem slug="minecraft:furnace" inline={true}/>, and consumes [Energy](/energy) at the 32E rate rather than solid fuel. The **Electric Furnace** has an internal buffer of 1k Energy.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input air techreborn:electronic_circuit air input minecraft:redstone techreborn:iron_furnace minecraft:redstone input air air air output techreborn:electric_furnace"/>
+<Machine config={{
+  "id": "electric_furnace",
+  "input": [
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:electronic_circuit",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:redstone",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_furnace",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:redstone",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:electric_furnace"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 Usage is same as for vanilla furnace except you need to provide energy instead of fuel.

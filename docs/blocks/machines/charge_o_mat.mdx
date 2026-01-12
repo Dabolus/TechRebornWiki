@@ -8,10 +8,57 @@ title: Charge O Mat
 
 The **Charge-O-Mat** charges batteries and tools, like the advanced drill. It can charge up to six items at the same time. It has an input rate of 2048 FE/tick and an internal buffer of 400K FE.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:energy_flow_chip techreborn:energy_crystal techreborn:energy_flow_chip input minecraft:chest techreborn:lapotronic_energy_orb minecraft:chest input techreborn:energy_flow_chip techreborn:advanced_machine_block techreborn:energy_flow_chip output techreborn:charge_o_mat" />
+<Machine config={{
+  "id": "charge_o_mat",
+  "input": [
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_crystal",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:lapotronic_energy_orb",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:chest",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:energy_flow_chip",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:charge_o_mat"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 Connect power source to **Charge-O-Mat** and put items into slot in machine GUI.

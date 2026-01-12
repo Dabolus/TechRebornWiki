@@ -16,14 +16,61 @@ For more details and how to use, read [general information about Batteries](/doc
 ¹ *32 E/t base input. If ≥32 attached, increased to 128 E/t; if ≥128, increased to 512 E/t.*  
 ² *x = number of LESU Storage blocks attached; e.g. 5 blocks = 384 E/t output and 24 ME storage*
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input air techreborn:lv_transformer air input techreborn:advanced_circuit techreborn:lsu_storage techreborn:advanced_circuit input air techreborn:mv_transformer air output techreborn:lapotronic_su"/>
+<Machine config={{
+  "id": "lapotronic_su",
+  "input": [
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:lv_transformer",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:lsu_storage",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:mv_transformer",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:lapotronic_su"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 - While not impressive on its own, the LESU can be expanded by connecting  
-  - <McItem slug="techreborn:lesu_storage" inline={true}/>
+  - <McItem slug="techreborn:lsu_storage" inline={true} overrides={{name:"LESU Storage"}}/>
   to form a multi-block battery. Each attached **LESU Storage** increases energy storage and output rate.
 - Input rate has non-linear scaling:
   - ≥ 32 LESU Storage blocks → 128 E/t input

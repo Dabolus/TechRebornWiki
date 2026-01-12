@@ -12,11 +12,78 @@ title: Copper Cable
 |--------|----------|--------|
 | Medium | 128 E/t  | 512 E  |
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input air air air input techreborn:copper_ingot techreborn:copper_ingot techreborn:copper_ingot input air air air output techreborn:copper_cable,6"/><br/>
-<McItem slug="techreborn:wire_mill" inline={true}/> recipe:<br/>
-<McItem slug="techreborn:copper_ingot" inline={true}/> → 6x <McItem slug="techreborn:copper_cable" inline={true}/>
+<Machine config={{
+  "id": "copper_cable",
+  "input": [
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:copper_cable",
+      "qty": 6
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+<Machine config={{
+  "id": "copper_cable",
+  "input": [
+    {
+      "id": "minecraft:copper_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:copper_cable",
+      "qty": 6
+    }
+  ],
+  "tool": "techreborn:wire_mill",
+  "meta": {
+    "power": 2,
+    "time": 200
+  }
+}} />
 
 ### Usage
 

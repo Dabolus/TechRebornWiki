@@ -20,10 +20,57 @@ Possible options are:
 
 It will use 10 Energy per tick to detect players.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input air techreborn:data_storage_core air input techreborn:advanced_circuit techreborn:computer_cube techreborn:advanced_circuit input air techreborn:data_storage_core air output techreborn:player_detector"/>
+<Machine config={{
+  "id": "player_detector",
+  "input": [
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:data_storage_core",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:computer_cube",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:data_storage_core",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:player_detector"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 Place a **Player Detector** in the world, provide it with energy, and set the necessary detection options / range settings.

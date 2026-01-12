@@ -14,8 +14,103 @@ For example:
 25x <McItem slug="minecraft:iron_ingot" /> + 2x <McItem slug="minecraft:coal" /> will produce 25x <McItem slug="techreborn:refined_iron_ingot" /> in <McItem slug="techreborn:iron_furnace" />
 
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input minecraft:iron_ingot minecraft:iron_ingot minecraft:iron_ingot input minecraft:iron_ingot air minecraft:iron_ingot input minecraft:iron_ingot minecraft:iron_ingot minecraft:iron_ingot output techreborn:iron_furnace" />
+<Machine config={{
+  "id": "iron_furnace",
+  "input": [
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:iron_furnace"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-<CraftingTable recipe="input air minecraft:iron_ingot air input minecraft:iron_ingot air minecraft:iron_ingot input minecraft:iron_ingot minecraft:furnace minecraft:iron_ingot output techreborn:iron_furnace"/>
+<Machine config={{
+  "id": "iron_furnace_alt",
+  "input": [
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:furnace",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:iron_furnace"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+

@@ -14,11 +14,58 @@ For more details and how to use, read [general information about Batteries](/doc
 |--------|-----------|-----------|---------|
 | Insane | 8192 E/t  | 8192 E/t  | 1 gE    |
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:iridium_alloy_plate techreborn:adjustable_su techreborn:iridium_alloy_plate input techreborn:adjustable_su minecraft:ender_chest techreborn:adjustable_su input techreborn:iridium_alloy_plate techreborn:adjustable_su techreborn:iridium_alloy_plate output techreborn:interdimensional_su"/>
+<Machine config={{
+  "id": "interdimensional_su",
+  "input": [
+    {
+      "id": "techreborn:iridium_alloy_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aesu",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iridium_alloy_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aesu",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:ender_chest",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aesu",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iridium_alloy_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:aesu",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iridium_alloy_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:interdimensional_su"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 - Acts similar to an <McItem slug="minecraft:ender_chest" inline={true}/> but for energy instead of items — all IDSUs share the same energy storage.
 - Works across distances (e.g. Overworld → Overworld) and dimensions (e.g. Overworld → Nether).

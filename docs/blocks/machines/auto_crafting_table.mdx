@@ -12,6 +12,57 @@ The **Auto Crafting Table** is a machine that can automate large amounts of craf
 |------|---------|------------|---------|
 | Low  | 32 E/t  | 10 E/t     | 10 kE   |
 
-### Recipe
+### Recipes
 
-<CraftingTable recipe=" input techreborn:advanced_circuit techreborn:iron_plate techreborn:advanced_circuit input techreborn:iron_plate minecraft:crafting_table techreborn:iron_plate input techreborn:advanced_circuit techreborn:iron_plate techreborn:advanced_circuit output techreborn:auto_crafting_table "/>
+<Machine config={{
+  "id": "auto_crafting_table",
+  "input": [
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:crafter",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:iron_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:auto_crafting_table"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+
+### Version Notes
+
+Before Minecraft 1.21.4, the Auto Crafting Table required a <McItem slug="minecraft:crafting_table" inline={true}/> instead of a <McItem slug="minecraft:crafter" inline={true}/> in its recipe.

@@ -8,8 +8,103 @@ title: Quantum Tank Unit
 
 The **Quantum Tank Unit** is a fluid storage unit with a capacity of 2,147,483,000 Mb.
 
-## Recipes
+### Recipes
 
-<CraftingTable recipe="input air techreborn:cell air input techreborn:rubber techreborn:quantum_storage_unit techreborn:rubber input air techreborn:cell air output techreborn:quantum_tank_unit"/>
+<Machine config={{
+  "id": "quantum_tank_unit",
+  "input": [
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cell",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:quantum_storage_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:rubber",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:cell",
+      "qty": 1
+    },
+    {
+      "id": "minecraft:air",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:quantum_tank_unit"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-<CraftingTable recipe="input techreborn:tungsten_plate techreborn:tungsten_plate techreborn:tungsten_plate input techreborn:industrial_tank_unit techreborn:industrial_machine_frame techreborn:industrial_tank_unit input techreborn:data_storage_chip techreborn:digital_display techreborn:data_storage_chip output techreborn:quantum_tank_unit"/>
+<Machine config={{
+  "id": "quantum_tank_unit_from_industrial",
+  "input": [
+    {
+      "id": "techreborn:tungsten_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:tungsten_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:tungsten_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_tank_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:industrial_tank_unit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:data_storage_chip",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:digital_display",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:data_storage_chip",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:quantum_tank_unit"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
+

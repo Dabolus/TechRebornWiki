@@ -8,13 +8,108 @@ title: Advanced Machine Casing
 
 The **Advanced Machine Casing** is used to build multi-block machines.
 
-## Recipes
+### Recipes
 
-<CraftingTable recipe="input techreborn:steel_plate techreborn:steel_plate techreborn:steel_plate input techreborn:advanced_circuit techreborn:advanced_machine_frame techreborn:advanced_circuit input techreborn:steel_plate techreborn:steel_plate techreborn:steel_plate output techreborn:advanced_machine_casing,4"/>
+<Machine config={{
+  "id": "advanced_machine_casing",
+  "input": [
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:advanced_machine_casing",
+      "qty": 4
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-<CraftingTable recipe="input techreborn:steel_plate techreborn:steel_plate techreborn:steel_plate input techreborn:advanced_circuit techreborn:standard_machine_casing techreborn:advanced_circuit input techreborn:steel_plate techreborn:steel_plate techreborn:steel_plate output techreborn:advanced_machine_casing"/>
+<Machine config={{
+  "id": "advanced_machine_casing_alt",
+  "input": [
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:standard_machine_casing",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:steel_plate",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:advanced_machine_casing"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Usage
+### Usage
 
 Used as an ingredient in the <McItem slug="minecraft:crafting_table" inline={true}/> to produce:
 

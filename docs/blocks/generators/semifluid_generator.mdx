@@ -1,53 +1,51 @@
 ---
-title: Diesel Generator
+title: Semifluid Generator
 ---
 
-<ItemImage file="diesel_generator" alt="Diesel Generator" size="200" />
+<ItemImage file="semifluid_generator" alt="Semifluid Generator" size="200" />
 
-# Diesel Generator
+The **Semifluid Generator** produces energy from various fluids. It has an internal tank that can hold 10k mB of fluid which is consumed as it is converted to energy.
 
-The **Diesel Generator** produces energy from various fluids. It has an internal tank that can hold 10k mB of fluid (10 **Buckets** or **Cells**) worth which is consumed as it is converted to energy.
-
-| Tier | Fuel Type | Output | Storage |
-|------|------------|--------|---------|
-| Basic | Diesel | 32 E/t | 10 kE |
+| Tier   | Generation Rate | Output  | Storage |
+|--------|------------------|---------|---------|
+| Medium | 8 E/t            | 128 E/t | 1 mE    |
 
 ### Fuel
 
-| Fuel | E/1000 mB |
-|------|-----------|
-| <McItem slug="techreborn:Nitrofuel" inline={true}/> | 24,000 |
-| <McItem slug="techreborn:Nitrocoal_Fuel" inline={true}/> | 48,000 |
-| <McItem slug="techreborn:Diesel" inline={true}/> | 128,000 |
-| <McItem slug="techreborn:Nitro_Diesel" inline={true}/> | 400,000 |
+| Fuel    | E/1000 mB |
+|---------|-----------|
+| Biofuel | 6,000     |
+| Oil     | 16,000    |
+| Sodium  | 30,000    |
+| Lithium | 60,000    |
 
 ### Recipes
 
 <Machine config={{
-  "id": "diesel_generator",
+  "id": "semi_fluid_generator",
   "input": [
     {
-      "id": "techreborn:refined_iron_ingot",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
-      "id": "techreborn:refined_iron_ingot",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
-      "id": "techreborn:refined_iron_ingot",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
-      "id": "techreborn:refined_iron_ingot",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
-      "id": "minecraft:air",
+      "id": "techreborn:reinforced_glass",
       "qty": 1
     },
     {
-      "id": "techreborn:refined_iron_ingot",
+      "id": "techreborn:iron_plate",
       "qty": 1
     },
     {
@@ -65,7 +63,7 @@ The **Diesel Generator** produces energy from various fluids. It has an internal
   ],
   "output": [
     {
-      "id": "techreborn:diesel_generator"
+      "id": "techreborn:semi_fluid_generator"
     }
   ],
   "tool": "minecraft:crafting_table",
@@ -73,7 +71,7 @@ The **Diesel Generator** produces energy from various fluids. It has an internal
 }} />
 
 <Machine config={{
-  "id": "diesel_generator_alt",
+  "id": "semi_fluid_generator_alt",
   "input": [
     {
       "id": "techreborn:aluminum_plate",
@@ -92,7 +90,7 @@ The **Diesel Generator** produces energy from various fluids. It has an internal
       "qty": 1
     },
     {
-      "id": "minecraft:air",
+      "id": "techreborn:reinforced_glass",
       "qty": 1
     },
     {
@@ -114,7 +112,7 @@ The **Diesel Generator** produces energy from various fluids. It has an internal
   ],
   "output": [
     {
-      "id": "techreborn:diesel_generator"
+      "id": "techreborn:semi_fluid_generator"
     }
   ],
   "tool": "minecraft:crafting_table",
@@ -126,10 +124,3 @@ The **Diesel Generator** produces energy from various fluids. It has an internal
 - Place a cell or bucket of fuel into the input slot to fill the internal tank  
 - Can also be filled by an external **[Tank](/docs/blocks/tanks/)**  
 - Outputs energy on all sides
-
-### Related Items
-
-- <McItem slug="techreborn:nitrofuel_cell" inline={true}/>
-- <McItem slug="techreborn:nitrocoalfuel_cell" inline={true}/>
-- <McItem slug="techreborn:diesel_cell" inline={true}/>
-- <McItem slug="techreborn:nitrodiesel_cell" inline={true}/>

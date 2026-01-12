@@ -8,11 +8,58 @@ title: Industrial Grinder
 
 The **Industrial Grinder** is a multi-block machine that allows better grinding of items. It is a medium tier machine with 40000FE internal energy buffer and 256FE input. Also it has internal tank for 16 buckets which store fluid used to grind ore.
 
-## Recipe
+### Recipes
 
-<CraftingTable recipe="input techreborn:industrial_electrolyzer techreborn:advanced_circuit techreborn:grinder input techreborn:diamond_grinding_head techreborn:diamond_grinding_head techreborn:diamond_grinding_head input techreborn:advanced_circuit techreborn:advanced_machine_block techreborn:advanced_circuit output techreborn:industrial_grinder"/>
+<Machine config={{
+  "id": "industrial_grinder",
+  "input": [
+    {
+      "id": "techreborn:industrial_electrolyzer",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:grinder",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:diamond_grinding_head",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:diamond_grinding_head",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:diamond_grinding_head",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_machine_frame",
+      "qty": 1
+    },
+    {
+      "id": "techreborn:advanced_circuit",
+      "qty": 1
+    }
+  ],
+  "output": [
+    {
+      "id": "techreborn:industrial_grinder"
+    }
+  ],
+  "tool": "minecraft:crafting_table",
+  "meta": {}
+}} />
 
-## Building instructions
+### Building instructions
 
 The **Industrial Grinder** multi-block has 3 layers.  
 The first layer consists of 9x <McItem slug="techreborn:standard_machine_casing" inline={true}/>  
@@ -27,7 +74,7 @@ The third layer again contains 9x <McItem slug="techreborn:standard_machine_casi
 Attach the **Industrial Grinder** to the middle layer centre and connect it to a power source.  
 <img src="/img/blocks/industrial_grinder.png" alt="industrial_grinder.png"/>
 
-## Machine GUI
+### Machine GUI
 
 **Industrial Grinder** has the following elements on its GUI:
 
